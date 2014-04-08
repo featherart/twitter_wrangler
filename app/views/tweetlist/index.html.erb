@@ -4,4 +4,10 @@
   <input type="text" ng-model='twitterName' size="50" placeholder="twitter username">
   <input type="submit" value="enter">
 </form>
-{{ twitterName }}
+<div ng-controller="TweetsCtrl">
+  <ul>
+    <li ng-repeat="tweet in tweets">
+      {{tweet.username}}
+    </li>
+  </ul>
+</div>
