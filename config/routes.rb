@@ -1,6 +1,6 @@
 TweetWrangler::Application.routes.draw do
   scope :api do
-    resources :tweets, only: [:index], defaults: {format: :json}
+    resources :tweets, defaults: {format: :json}
   end
   root 'tweetlist#index'  
 end
