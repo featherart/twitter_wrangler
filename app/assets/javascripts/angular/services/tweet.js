@@ -8,5 +8,10 @@ app.factory('Tweet', ['$resource', function($resource) {
   Tweet.prototype.delete = function(tId) {
     this.service.remove({tweetId: tId})
   };
+  Tweet.prototype.create = function(attr) {
+    return this.service.save(attr);
+  }
   return new Tweet;
 }]);
+
+ 

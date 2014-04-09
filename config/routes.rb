@@ -3,4 +3,6 @@ TweetWrangler::Application.routes.draw do
     resources :tweets, defaults: {format: :json}
   end
   root 'tweetlist#index'  
+
+  post 'tweets/create'
 end

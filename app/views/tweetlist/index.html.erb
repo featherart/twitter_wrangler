@@ -1,13 +1,18 @@
 <h1>Tweet Wrangler</h1>
 <h5>An app to play with the Twitter API and Angular</h5>
-<form>
+
+<div ng-controller="TweetsCtrl">
+<form ng-submit="createTweet()">
   <input type="text" ng-model='twitterName' size="50" placeholder="twitter username">
   <input type="submit" value="enter">
 </form>
-<div ng-controller="TweetsCtrl">
+  <div ng-show="error">
+    derp, there was a problem :(
+  </div>
   <ul>
     <li ng-repeat="tweet in tweets">
-      {{tweet.username}}
+      {{tweet.username}}<br>
+      {{tweet.text}}
       <a href='' ng-click="deleteTweet(tweet.id, $index)">Delete</a>
     </li>
   </ul>
