@@ -3,7 +3,10 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 gem 'angularjs-rails'
+
+# for twitter
 gem 'figaro'
+gem 'twitter', '~> 5.8.0'
 
 # Use postgresql as the database for Active Record
 gem 'pg'

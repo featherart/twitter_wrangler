@@ -1,7 +1,7 @@
 <h1>Tweet Wrangler</h1>
 <h5>An app to play with the Twitter API and Angular</h5>
 
-<div ng-controller="TweetsCtrl">
+<!-- <div ng-controller="TweetsCtrl"> -->
 <form ng-submit="createTweet()">
   <input type="text" ng-model='twitterName' size="50" placeholder="twitter username">
   <input type="submit" value="enter">
@@ -16,4 +16,14 @@
       <a href='' ng-click="deleteTweet(tweet.id, $index)">Delete</a>
     </li>
   </ul>
-</div>
+<!-- </div> -->
+
+<!-- testing the call to twitter api -->
+<% if params[:name] %>
+  <h5>Here are tweets for <%= params[:name] %>
+  <ul>
+   <% @tweets.each do |tweet| %> 
+    <li><%= tweet.text %></li>
+   <% end %>
+  </ul>
+<% end %>
