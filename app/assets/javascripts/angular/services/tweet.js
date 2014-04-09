@@ -1,15 +1,11 @@
-// app.factory('Tweet', ['$resource', function($resource) {
-//   function Tweet() {
-//     this.service = $resource('/api/stocks/:stockId', {stockId: '@id'});
-//   };
-//   Stock.prototype.all = function() {
-//     return this.service.query();
-//   };
-//   Stock.prototype.delete = function(stId) {
-//     this.service.remove({stockId: stId});
-//   };
-//   Stock.prototype.create = function(attr) {
-//     return this.service.save(attr);
-//   };
-//   return new Stock;
-// }]);
+app.factory('Tweet', ['$resource', function($resource) {
+  function Tweet() {
+    //this.service = $resource('/api/tweets');
+    this.service = $resource('/api/tweets/:tweetId', {tweetId: '@id'});
+    //var Tweets = $resource('/api/tweets');
+  };
+  Tweet.prototype.all = function() {
+    return this.service.query();
+  };
+  return new Tweet;
+}]);

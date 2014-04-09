@@ -18,4 +18,5 @@ to create database (e.g.: createdb tweet_wrangler)
 - rails g resource in Rails 4 is much the same:
 you get a :resource in routes, a controller and a model
 
+- in Angular it’s best to define a service around the rails api call, so tweet.js goes into the directory 'angular/services'
 
