@@ -20,3 +20,8 @@ you get a :resource in routes, a controller and a model
 
 - in Angular it’s best to define a service around the rails api call, so tweet.js goes into the directory 'angular/services'
 
+- on $resource:
+http://docs.angularjs.org/api/ngResource/service/$resource explains where the @id is coming from here
+
+this.service = $resource('/api/tweets/:tweetId', {tweetId: '@id'});
+

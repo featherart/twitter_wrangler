@@ -1,5 +1,7 @@
 app.controller('TweetsCtrl', ['$scope', 'Tweet', function($scope, Tweet) {
-  //var Tweets = $resource('/api/tweets');
-  //$scope.tweets = Tweets.query();
   $scope.tweets = Tweet.all();
+
+  $scope.deleteTweet = function(idx) {
+    $scope.tweets.splice(idx, 1);
+  };
 }]);

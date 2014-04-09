@@ -8,6 +8,7 @@
   <ul>
     <li ng-repeat="tweet in tweets">
       {{tweet.username}}
+      <a href='' ng-click="deleteTweet($index)">Delete</a>
     </li>
   </ul>
 </div>
