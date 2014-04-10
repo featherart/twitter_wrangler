@@ -2,10 +2,16 @@ class TweetsController < ApplicationController
   respond_to :json
 
   def index
+    puts "$$$$$$$$TweetsController"
+    p params
+    puts "***********************"
     respond_with Tweet.all
   end
 
   def create
+    puts "$$$$$$$$TweetsController"
+    p params
+    puts "***********************"
     respond_with Tweet.create(tweet_params)
   end
 

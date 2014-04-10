@@ -1,22 +1,22 @@
 class TweetlistController < ApplicationController
   def index
-    puts "**************"
-    puts "in index"
-    p params
-    puts "**************" 
+    # puts "**************"
+    # puts "in index"
+    # p params
+    # puts "**************" 
 
-    if params[:name]
-      puts "*********************"
-      @tweets = Tweet.tweet_fetch(params[:name])
+    # if params[:name]
+    #   puts "*********************"
+    #   @tweets = Tweet.tweet_fetch(params[:name])
       
-      p @tweets
-      puts "$$$$$$$$$$$$$$$$$$$$44"
+    #   p @tweets
+    #   puts "$$$$$$$$$$$$$$$$$$$$44"
       
-    end
+    # end
 
-    respond_to do |format|
-      format.html #{ render root_path }
-      #format.json {render json: @tweets}
-    end
+    # respond_to do |format|
+    #   format.html #{ render root_path }
+    #   #format.json {render json: @tweets}
+    # end
   end
 end

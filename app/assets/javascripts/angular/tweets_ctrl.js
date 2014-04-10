@@ -1,14 +1,16 @@
 app.controller('TweetsCtrl', ['$scope', 'Tweet', '$http', function($scope, Tweet, $http) {
+  console.log("in controller");
   $scope.tweets = Tweet.all();
   $scope.error = false;
 
   $scope.createTweet = function() {
+    console.log("in create tweet");
     var attr = {};
     attr.username = $scope.twitterName;
     console.log("attr.username: " + attr.username);
     $http({
       method: 'POST',
-      url: '/',
+      url: '/create',
       data: {
         name: attr.username
       }
