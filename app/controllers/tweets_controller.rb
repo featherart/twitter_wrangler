@@ -2,17 +2,18 @@ class TweetsController < ApplicationController
   respond_to :json
 
   def index
-    puts "$$$$$$$$TweetsController"
+    puts "$$$$$$$$$$$$$$$$$$$$$$$$"
     p params
     puts "***********************"
     respond_with Tweet.all
   end
 
   def create
-    puts "$$$$$$$$TweetsController"
+    puts "$$$$$$$$$$$$$$$$$$$$$$$$"
     p params
     puts "***********************"
-    respond_with Tweet.create(tweet_params)
+    #respond_with Tweet.create(tweet_params)
+    respond_with TweetFetcher.tweet_fetch(params[:username])
   end
 
   def destroy

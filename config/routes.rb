@@ -4,5 +4,5 @@ TweetWrangler::Application.routes.draw do
   end
   root 'tweetlist#index'  
 
-  post 'tweets/create'
+  #post 'tweets/create'
 end
