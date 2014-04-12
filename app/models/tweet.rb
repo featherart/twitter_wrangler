@@ -8,7 +8,7 @@ class Tweet < ActiveRecord::Base
     end
 
     def self.tweet_fetch(name)
-      @client.user_timeline(name)     
+      @client.user_timeline(name) 
     end
 
     def self.update_status(text)

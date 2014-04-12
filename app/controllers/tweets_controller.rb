@@ -12,8 +12,11 @@ class TweetsController < ApplicationController
     puts "$$$$$$$$$$$$$$$$$$$$$$$$"
     p params
     puts "***********************"
-    #respond_with Tweet.create(tweet_params)
-    respond_with TweetFetcher.tweet_fetch(params[:username])
+    tweets = Tweet.tweet_fetch(params[:username])
+    
+    #binding.pry
+    respond_with Tweet.create(tweet_params)
+    #respond_with TweetFetcher.tweet_fetch(params[:username])
   end
 
   def destroy
