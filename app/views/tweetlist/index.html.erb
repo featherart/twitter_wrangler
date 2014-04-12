@@ -13,7 +13,7 @@
   <ul>
     <li ng-repeat="tweet in tweets">
       {{tweet.username}}<br>
-      {{tweet.text}}
+      {{tweet.text}}<br>
       <a href='' ng-click="deleteTweet(tweet.id, $index)">Delete</a>
     </li>
   </ul>

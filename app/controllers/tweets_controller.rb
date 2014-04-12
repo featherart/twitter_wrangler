@@ -14,9 +14,10 @@ class TweetsController < ApplicationController
     puts "***********************"
     tweets = Tweet.tweet_fetch(params[:username])
     
-    #binding.pry
-    respond_with Tweet.create(tweet_params)
-    #respond_with TweetFetcher.tweet_fetch(params[:username])
+    # not sure how to handle multiple tweets
+    # for now create one
+    respond_with Tweet.create(username: params[:username], text: tweets.first.text)
+    
   end
 
   def destroy

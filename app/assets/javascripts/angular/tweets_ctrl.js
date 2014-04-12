@@ -16,12 +16,10 @@ app.controller('TweetsCtrl', ['$scope', 'Tweet', '$http', function($scope, Tweet
       }
     }).success(function(data, status, headers, config) {
      $scope.error = false;
-     // data still not holding data
-     // need data to create object that gets iterated through in view
-     //attr.text = data.query.results.username["text"];
-     attr.text = "hi world";
-     console.log("response: " + res.data);
-     debugger;
+     // only way to get data here seems to be setting up a promise
+     // need to do more research on that
+     console.log("response: " + res);
+
      var newTweet = Tweet.create(attr);
      $scope.tweets.push(newTweet);
      $scope.twitterName = ""; // clear form
